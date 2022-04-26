@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpisanix=self.webpackChunkpisanix||[]).push([[713],{3457:function(a){a.exports=JSON.parse('{"pisanix":{"allTagsPath":"/blog/tags","name":"pisanix","count":1,"permalink":"/blog/tags/pisanix"},"greetings":{"allTagsPath":"/blog/tags","name":"greetings","count":1,"permalink":"/blog/tags/greetings"}}')}}]);
