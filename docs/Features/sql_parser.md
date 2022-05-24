@@ -12,7 +12,7 @@ PISANIX 除了理解 SQL 协议外, 能读懂 SQL 语句也是一个很重要的
 
 ## MySQL
 为了最大的程度的兼容原生的 MySQL 语法，PISANIX 采用原生的[ MySQL 语法文件](https://github.com/mysql/mysql-server/blob/8.0/sql/sql_yacc.yy)，基于 `GRMTOOLS` 实现了 SQL 语法解析。
- `GRMTOOLS` 是一个用 RUST 写的兼容yacc的语法解析工具，详细信息请参考[ GITHUB ](https://github.com/softdevteam/grmtools.git)。
+ `GRMTOOLS` 是一个用 RUST 写的兼容 `YACC` 的语法解析工具，详细信息请参考[ GITHUB ](https://github.com/softdevteam/grmtools.git)。
 
 ### 目前状态
 当前还有些 SQL 语句不支持，我们还在不断快速完善中。

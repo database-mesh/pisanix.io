@@ -2,24 +2,24 @@
 sidebar_position: 5
 ---
 
-# 插件
+## 中间件
 
-目前pisanix的插件设计参考了[ TOWER-RS ](https://github.com/tower-rs/tower.git)，可以很好的满足未来例如 `LUA`，`WASM` 等其他扩展方式。
+目前运行中间件的方式参考了[ TOWER-RS ](https://github.com/tower-rs/tower.git)，可以很好的满足未来扩展的需求。
 
-插件中有两个概念:
-> Layer:  是对 `Service` 的包装，每个 `Service` 可以有多个不同的插件。
+其中有两个概念:
+> Layer:  是对 `Service` 的包装，每个 `Service` 可以有多个不同的中间件。
 
-> Service: 指 `PISANIX` 内部允许执行插件的服务或者是某个功能函数，可以运行一些自定义的逻辑，如 `metris` 收集。
+> Service: 指 `PISANIX` 内部允许执行中间件的服务或者是某个功能函数，可以运行一些自定义的逻辑，如 `METRICS` 收集。
 
 实现[伪代码](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=0db8ca6f72096c7a74682085a66e3270)。
 
-# 实现
+## 实现
 目前实现了两个默认插件 `SQL断路器` 和 `SQL限流`。
 
-## SQL断路器
+### SQL断路器
 禁止运行匹配正则的语句。
 
-### 示例配置
+#### 示例配置
 ``` toml
 [[proxy.configs.plugin.audit]]
 regex = "\\w+"
@@ -27,10 +27,10 @@ regex = "\\w+"
 
 > 可以有多个规则
 
-## SQL限流
+### SQL限流
 限流规则表示在duration秒内并发运行匹配正则的sql语句只能有 `limit` 条，
 
-### 示例配置
+#### 示例配置
 ``` toml
 [[proxy.configs.plugin.limit]]
 regex = "\\w+"    
