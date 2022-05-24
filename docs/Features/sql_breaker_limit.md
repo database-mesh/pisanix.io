@@ -1,36 +1,20 @@
-<!--
- Copyright 2022 Database Mesh Authors
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- 
-     http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
 ---
 sidebar_position: 5
 ---
 
 # 插件
 
-目前pisanix的插件设计参考了[ tower-rs ](https://github.com/tower-rs/tower.git)，可以很好的满足未来例如lua，wasm等其他扩展方式。
+目前pisanix的插件设计参考了[ TOWER-RS ](https://github.com/tower-rs/tower.git)，可以很好的满足未来例如 `LUA`，`WASM` 等其他扩展方式。
 
 插件中有两个概念:
-> Layer:  是对Service的包装，每个Service可以有多个不同的插件。
+> Layer:  是对 `Service` 的包装，每个 `Service` 可以有多个不同的插件。
 
-> Service: 指pisa内部允许执行插件的服务或者是某个功能函数，可以运行一些自定义的逻辑，如metris收集。
+> Service: 指 `PISANIX` 内部允许执行插件的服务或者是某个功能函数，可以运行一些自定义的逻辑，如 `metris` 收集。
 
 实现[伪代码](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=0db8ca6f72096c7a74682085a66e3270)。
 
 # 实现
-目前实现了两个默认插件`SQL断路器`和`SQL限流`。
+目前实现了两个默认插件 `SQL断路器` 和 `SQL限流`。
 
 ## SQL断路器
 禁止运行匹配正则的语句。

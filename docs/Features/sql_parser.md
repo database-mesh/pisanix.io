@@ -1,31 +1,21 @@
-<!--
- Copyright 2022 Database Mesh Authors
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- 
-     http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
 ---
 sidebar_position: 4
 ---
 
-# SQL解析
-pisanix除了理解sql协议外, 能读懂sql语句也是一个很重要的功能，读写分离，分片等功能也都依赖Sql解析，在pisanix中占着举足轻重的作用。
+## SQL解析
+PISANIX 除了理解 SQL 协议外, 能读懂 SQL 语句也是一个很重要的功能，读写分离，分片等功能也都依赖 SQL 解析，在 PISANIX 中占着举足轻重的作用。
+由于 PISANIX 支持多种数据源，因此在 PISANIX 中，每种不同的数据源都要实现各自对应的 SQL 解析，未来我们会支持不同数据源使用SQL 之间的转换，以实现快速支持新的数据源。
+
 
 ## 实现
-为了最大的程度的兼容原生的sql语法，pisanix采用原生的[ mysql 语法文件](https://github.com/mysql/mysql-server/blob/8.0/sql/sql_yacc.yy)，基于 `grmtools` 实现了sql语法解析。
- `grmtools` 是一个用rust写的兼容yacc的语法解析工具，详细信息请参考[ github ](https://github.com/softdevteam/grmtools.git)。
+目前 PISANIX 只实现了对 MySQL 的语法的解析。
 
-## 目前状态
+## MySQL
+为了最大的程度的兼容原生的 MySQL 语法，PISANIX 采用原生的[ MySQL 语法文件](https://github.com/mysql/mysql-server/blob/8.0/sql/sql_yacc.yy)，基于 `GRMTOOLS` 实现了 SQL 语法解析。
+ `GRMTOOLS` 是一个用 RUST 写的兼容yacc的语法解析工具，详细信息请参考[ GITHUB ](https://github.com/softdevteam/grmtools.git)。
+
+### 目前状态
+当前还有些 SQL 语句不支持，我们还在不断快速完善中。
 
 - [x] SELECT
 - [x] INSERT
@@ -38,7 +28,7 @@ pisanix除了理解sql协议外, 能读懂sql语句也是一个很重要的功�
 - [ ] SHOW
 - [ ] CREATE
 
-## 测试
-由于sql语句的复杂多样性，很难有有一个完整的测试集能覆盖所有可能的sql语句。
-我们使用用mysql test框架中能正常运行的sql语句作为测试集来测试。
+### 测试
+由于 SQL 语句的复杂多样性，很难有有一个完整的测试集能覆盖所有可能的 SQL 语句。
+我们使用用 MySQL TEST 框架中能正常运行的sql语句作为测试集来测试。
 目前测试正在进行中，只测试了 `SELECT` 语句，`98%`的语句能成功解析, 还在不断完善中。
