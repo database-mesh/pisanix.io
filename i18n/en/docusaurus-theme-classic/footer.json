@@ -21,11 +21,11 @@
   },
   "link.item.label.Twitter": {
     "message": "Twitter",
-    "description": "The label of footer link with label=Twitter linking to https://twitter.com/pisanix"
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/maxwell9215"
   },
   "link.item.label.Slack": {
     "message": "Slack",
-    "description": "The label of footer link with label=Slack linking to https://twitter.com/docusaurus"
+    "description": "The label of footer link with label=Slack linking to https://databasemesh.slack.com/"
   },
   "link.item.label.Blog": {
     "message": "Blog",
@@ -36,7 +36,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/database-mesh/pisanix"
   },
   "copyright": {
-    "message": "Copyright © 2022 Pisanix Authors. Built with Docusaurus.",
+    "message": "Copyright © 2022 SphereEx Authors. Built with Docusaurus.",
     "description": "The footer copyright"
   },
   "link.item.label.Documentation": {
