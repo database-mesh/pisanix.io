@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpisanix=self.webpackChunkpisanix||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Latest","items":[{"title":"Hello! Pisanix!","permalink":"/en/blog/greetings"}]}')}}]);
