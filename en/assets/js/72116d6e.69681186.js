@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpisanix=self.webpackChunkpisanix||[]).push([[987],{4018:function(e){e.exports=JSON.parse('{"permalink":"/en/blog/tags/greetings","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

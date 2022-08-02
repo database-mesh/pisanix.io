@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpisanix=self.webpackChunkpisanix||[]).push([[595],{7142:function(a){a.exports=JSON.parse('{"allTagsPath":"/en/blog/tags","name":"pisanix","count":1,"permalink":"/en/blog/tags/pisanix"}')}}]);
